@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>HTML Documentation</title>
+  </head>
+  
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>HTML Documentation</h1>
+      </header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#history">History</a></li>
+        <li><a class="nav-link" href="#markup">Markup</a></li>
+        <li><a class="nav-link" href="#elements">Elements</a></li>
+        <li><a class="nav-link" href="#semantic_HTML">Semantic HTML</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="introduction" class="main-section">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML elements are the building blocks of HTML pages.</p>
+        <p>HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. The inclusion of CSS defines the look and layout of content.</p>
+      </section>
+      <section id="history" class="main-section">
+        <header>
+          <h2>History</h2>
+        </header>
+        <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system. Berners-Lee specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN. In his personal notes of 1990, Berners-Lee listed "some of the many areas in which hypertext is used"; an encyclopedia is the first entry.</p>
+        <p>Since 1996, the HTML specifications have been maintained, with input from commercial software vendors, by the World Wide Web Consortium (W3C). The most current version in use is HTML 5.</p>
+      </section>
+      <section id="markup" class="main-section">
+        <header>
+          <h2>Markup</h2>
+        </header>
+        <p>HTML markup consists of several key components.  HTML tags most commonly come in pairs like <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>, although some represent empty elements and so are unpaired, for example <code>&lt;img&gt;</code>. The first tag in such a pair is the start tag, and the second is the end tag (they are also called opening tags and closing tags). Another important component is the HTML document type declaration, which triggers standards mode rendering.</p>
+        <p>The following is an example of the classic "Hello, World!" program:</p>
+        <code>
+          <pre>
+          &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;This is a title&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div&gt;
+                  &lt;p&gt;Hello world!&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </pre>
+        </code>
+        <p>The text between <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code> describes the web page, and the text between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> is the visible page content. The markup text <code>&lt;title&gt;This is a title&lt;/title&gt;</code> defines the browser page title shown on browser tabs and window titles and the tag <code>&lt;div&gt;</code> defines a division of the page used for easy styling. Between <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code>, a <code>&lt;meta&gt;</code> element can be used to define webpage metadata. The Document Type Declaration <code>&lt;!DOCTYPE html&gt;</code> is for HTML5. If a declaration is not included, various browsers will revert to "quirks mode" for rendering.</p>
+      </section>
+      <section id="elements" class="main-section">
+        <header>
+          <h2>Elements</h2>
+        </header>
+        <p>The start tag may also include the element's attributes within the tag. These indicate other information, such as identifiers for sections within the document, identifiers used to bind style information to the presentation of the document, and for some tags such as the <code>&lt;img&gt;</code> used to embed images, the reference to the image resource in the format like this: <code class="break">&lt;img src="example.com/example.jpg"&gt;</code></p>
+        <p>The general form of an HTML element is therefore: <code class="break">&lt;tag attribute1="value1" attribute2="value2"&gt;'content'&lt;/tag&gt;</code>. Some HTML elements are defined as empty elements and take the form <code>&lt;tag attribute1="value1" attribute2="value2"&gt;</code>.</p>
+        <p>Some of the most commonly used elements are:</p>
+        <ul>
+          <li><h3 class="element-title"><code>&lt;p&gt;&lt;/p&gt;</code></h3>: is a container element used to introduce a paragraph. The content goes between the start and the end tag, and browsers display different paragraphs with line breaks between them.</li>
+          <li><h3 class="element-title"><code>&lt;h1&gt;&lt;/h1&gt; - &lt;h6&gt;&lt;/h6&gt;</code></h3>: The primary function of heading tags is to create a visual and logical hierarchy of the page. There are 6 heading elements from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, with <code>&lt;h1&gt;</code> being the most and <code>&lt;h6&gt;</code> the least important. Visually, headings stand out from the body text with a more prominent and bolder font and paragraph breaks before and after. Logically, search engines use the headings to index the structure and content of the web page. Such a structure helps sighted, and assistive technology users quickly skim through the page and find the information they need.</li>
+          <li><h3 class="element-title"><code>&lt;a href=""&gt;&lt;/a&gt;</code></h3>: this tag ("a" stands for "anchor") defines a hyperlink. It has a required attribute href that defines the link's destination — without it, the link simply won't work.
+
+</li>
+          <li><h3 class="element-title"><code>&lt;ol&gt;&lt;/ol&gt;</code></h3>: defines an ordered list.</li>
+          <li><h3 class="element-title"><code>&lt;ul&gt;&lt;/ul&gt;</code></h3>: defines an unordered list.</li>
+          <li><h3 class="element-title"><code>&lt;li&gt;&lt;/li&gt;</code></h3>: defines a list item. These elements are nested inside the <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> elements.</li>
+          <li><h3 class="element-title"><code>&lt;div&gt;&lt;/div&gt;</code></h3>: it acts like a container that separates a webpage into sections.</li>
+          <li><h3 class="element-title"><code>&lt;span&gt;&lt;/span&gt;</code></h3>: this element's only difference from the <code>&lt;div&gt;</code> element is that it's an inline element — it doesn't force a line break and only takes up as much width as necessary.</li>
+        </ul>
+      </section>
+      <section id="semantic_HTML" class="main-section">
+        <header>
+          <h2>Semantic HTML</h2>
+        </header>
+        <p>Semantic HTML is a way of writing HTML that emphasizes the meaning of the encoded information over its presentation.</p>
+        <p>An important type of web agent that does crawl and read web pages automatically, without prior knowledge of what it might find, is the web crawler or search-engine spider. These software agents are dependent on the semantic clarity of web pages they find as they use various techniques and algorithms to read and index millions of web pages a day and provide web users with search facilities without which the World Wide Web's usefulness would be greatly reduced. In order for search engine spiders to be able to rate the significance of pieces of text they find in HTML documents, and also for those creating mashups and other hybrids as well as for more automated agents as they are developed, the semantic structures that exist in HTML need to be widely and uniformly applied to bring out the meaning of the published text.</p>
+        <p>Good semantic HTML also improves the accessibility of web documents. For example, when a screen reader or audio browser can correctly ascertain the structure of a document, it will not waste the visually impaired user's time by reading out repeated or irrelevant information when it has been marked up correctly.</p>
+        <p>Some semantic HTML elements are:</p>
+        <ul>
+          <li><h3 class="element-title"><code>&lt;section&gt;&lt;/section&gt;</code></h3>: it defines a thematic grouping of content, typically with a heading.</li>
+          <li><h3 class="element-title"><code>&lt;article&gt;&lt;/article&gt;</code></h3>:  it specifies independent, self-contained content.</li>
+          <li><h3 class="element-title"><code>&lt;header&gt;&lt;/header&gt;</code></h3>: it represents a container for introductory content or a set of navigational links.</li>
+          <li><h3 class="element-title"><code>&lt;footer&gt;&lt;/footer&gt;</code></h3>: it defines a footer for a document or section.</li>
+          <li><h3 class="element-title"><code>&lt;nav&gt;&lt;/nav&gt;</code></h3>: it defines a set of navigation links.</li>
+          <li><h3 class="element-title"><code>&lt;main&gt;&lt;/main&gt;</code></h3>: it specify the main content of the document.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
